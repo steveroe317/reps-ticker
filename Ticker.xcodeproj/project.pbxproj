@@ -1,0 +1,1026 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B87BFDB2C31FE490008724A /* TickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87BFDA2C31FE490008724A /* TickerApp.swift */; };
+		2B87BFDD2C31FE490008724A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87BFDC2C31FE490008724A /* ContentView.swift */; };
+		2B87BFDF2C31FE4A0008724A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B87BFDE2C31FE4A0008724A /* Assets.xcassets */; };
+		2B87BFE22C31FE4A0008724A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B87BFE12C31FE4A0008724A /* Preview Assets.xcassets */; };
+		2B87BFEC2C31FE4A0008724A /* TickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87BFEB2C31FE4A0008724A /* TickerTests.swift */; };
+		2B87BFF62C31FE4A0008724A /* TickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87BFF52C31FE4A0008724A /* TickerUITests.swift */; };
+		2B87BFF82C31FE4A0008724A /* TickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87BFF72C31FE4A0008724A /* TickerUITestsLaunchTests.swift */; };
+		2B87BFFE2C31FE4A0008724A /* Ticker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B87BFFD2C31FE4A0008724A /* Ticker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B87C0032C31FE4A0008724A /* TickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C0022C31FE4A0008724A /* TickerApp.swift */; };
+		2B87C0052C31FE4A0008724A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C0042C31FE4A0008724A /* ContentView.swift */; };
+		2B87C0072C31FE4B0008724A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B87C0062C31FE4B0008724A /* Assets.xcassets */; };
+		2B87C00A2C31FE4B0008724A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B87C0092C31FE4B0008724A /* Preview Assets.xcassets */; };
+		2B87C0142C31FE4B0008724A /* Ticker_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C0132C31FE4B0008724A /* Ticker_Watch_AppTests.swift */; };
+		2B87C01E2C31FE4B0008724A /* Ticker_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C01D2C31FE4B0008724A /* Ticker_Watch_AppUITests.swift */; };
+		2B87C0202C31FE4B0008724A /* Ticker_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C01F2C31FE4B0008724A /* Ticker_Watch_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B87BFE82C31FE4A0008724A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B87BFCF2C31FE490008724A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B87BFD62C31FE490008724A;
+			remoteInfo = Ticker;
+		};
+		2B87BFF22C31FE4A0008724A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B87BFCF2C31FE490008724A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B87BFD62C31FE490008724A;
+			remoteInfo = Ticker;
+		};
+		2B87BFFF2C31FE4A0008724A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B87BFCF2C31FE490008724A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B87BFFC2C31FE4A0008724A;
+			remoteInfo = "Ticker Watch App";
+		};
+		2B87C0102C31FE4B0008724A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B87BFCF2C31FE490008724A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B87BFFC2C31FE4A0008724A;
+			remoteInfo = "Ticker Watch App";
+		};
+		2B87C01A2C31FE4B0008724A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B87BFCF2C31FE490008724A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B87BFFC2C31FE4A0008724A;
+			remoteInfo = "Ticker Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B87C0262C31FE4B0008724A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2B87BFFE2C31FE4A0008724A /* Ticker Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2B87BFD72C31FE490008724A /* Ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B87BFDA2C31FE490008724A /* TickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerApp.swift; sourceTree = "<group>"; };
+		2B87BFDC2C31FE490008724A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B87BFDE2C31FE4A0008724A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B87BFE12C31FE4A0008724A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B87BFE72C31FE4A0008724A /* TickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B87BFEB2C31FE4A0008724A /* TickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerTests.swift; sourceTree = "<group>"; };
+		2B87BFF12C31FE4A0008724A /* TickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B87BFF52C31FE4A0008724A /* TickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerUITests.swift; sourceTree = "<group>"; };
+		2B87BFF72C31FE4A0008724A /* TickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B87BFFD2C31FE4A0008724A /* Ticker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ticker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B87C0022C31FE4A0008724A /* TickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerApp.swift; sourceTree = "<group>"; };
+		2B87C0042C31FE4A0008724A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B87C0062C31FE4B0008724A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B87C0092C31FE4B0008724A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B87C00F2C31FE4B0008724A /* Ticker Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ticker Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B87C0132C31FE4B0008724A /* Ticker_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker_Watch_AppTests.swift; sourceTree = "<group>"; };
+		2B87C0192C31FE4B0008724A /* Ticker Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ticker Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B87C01D2C31FE4B0008724A /* Ticker_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		2B87C01F2C31FE4B0008724A /* Ticker_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B87BFD42C31FE490008724A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87BFE42C31FE4A0008724A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87BFEE2C31FE4A0008724A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87BFFA2C31FE4A0008724A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87C00C2C31FE4B0008724A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87C0162C31FE4B0008724A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B87BFCE2C31FE490008724A = {
+			isa = PBXGroup;
+			children = (
+				2B87BFD92C31FE490008724A /* Ticker */,
+				2B87BFEA2C31FE4A0008724A /* TickerTests */,
+				2B87BFF42C31FE4A0008724A /* TickerUITests */,
+				2B87C0012C31FE4A0008724A /* Ticker Watch App */,
+				2B87C0122C31FE4B0008724A /* Ticker Watch AppTests */,
+				2B87C01C2C31FE4B0008724A /* Ticker Watch AppUITests */,
+				2B87BFD82C31FE490008724A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B87BFD82C31FE490008724A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B87BFD72C31FE490008724A /* Ticker.app */,
+				2B87BFE72C31FE4A0008724A /* TickerTests.xctest */,
+				2B87BFF12C31FE4A0008724A /* TickerUITests.xctest */,
+				2B87BFFD2C31FE4A0008724A /* Ticker Watch App.app */,
+				2B87C00F2C31FE4B0008724A /* Ticker Watch AppTests.xctest */,
+				2B87C0192C31FE4B0008724A /* Ticker Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B87BFD92C31FE490008724A /* Ticker */ = {
+			isa = PBXGroup;
+			children = (
+				2B87BFDA2C31FE490008724A /* TickerApp.swift */,
+				2B87BFDC2C31FE490008724A /* ContentView.swift */,
+				2B87BFDE2C31FE4A0008724A /* Assets.xcassets */,
+				2B87BFE02C31FE4A0008724A /* Preview Content */,
+			);
+			path = Ticker;
+			sourceTree = "<group>";
+		};
+		2B87BFE02C31FE4A0008724A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2B87BFE12C31FE4A0008724A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B87BFEA2C31FE4A0008724A /* TickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B87BFEB2C31FE4A0008724A /* TickerTests.swift */,
+			);
+			path = TickerTests;
+			sourceTree = "<group>";
+		};
+		2B87BFF42C31FE4A0008724A /* TickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B87BFF52C31FE4A0008724A /* TickerUITests.swift */,
+				2B87BFF72C31FE4A0008724A /* TickerUITestsLaunchTests.swift */,
+			);
+			path = TickerUITests;
+			sourceTree = "<group>";
+		};
+		2B87C0012C31FE4A0008724A /* Ticker Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				2B87C0022C31FE4A0008724A /* TickerApp.swift */,
+				2B87C0042C31FE4A0008724A /* ContentView.swift */,
+				2B87C0062C31FE4B0008724A /* Assets.xcassets */,
+				2B87C0082C31FE4B0008724A /* Preview Content */,
+			);
+			path = "Ticker Watch App";
+			sourceTree = "<group>";
+		};
+		2B87C0082C31FE4B0008724A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2B87C0092C31FE4B0008724A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B87C0122C31FE4B0008724A /* Ticker Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B87C0132C31FE4B0008724A /* Ticker_Watch_AppTests.swift */,
+			);
+			path = "Ticker Watch AppTests";
+			sourceTree = "<group>";
+		};
+		2B87C01C2C31FE4B0008724A /* Ticker Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B87C01D2C31FE4B0008724A /* Ticker_Watch_AppUITests.swift */,
+				2B87C01F2C31FE4B0008724A /* Ticker_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "Ticker Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B87BFD62C31FE490008724A /* Ticker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B87C0272C31FE4B0008724A /* Build configuration list for PBXNativeTarget "Ticker" */;
+			buildPhases = (
+				2B87BFD32C31FE490008724A /* Sources */,
+				2B87BFD42C31FE490008724A /* Frameworks */,
+				2B87BFD52C31FE490008724A /* Resources */,
+				2B87C0262C31FE4B0008724A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B87C0002C31FE4A0008724A /* PBXTargetDependency */,
+			);
+			name = Ticker;
+			productName = Ticker;
+			productReference = 2B87BFD72C31FE490008724A /* Ticker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B87BFE62C31FE4A0008724A /* TickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B87C02A2C31FE4B0008724A /* Build configuration list for PBXNativeTarget "TickerTests" */;
+			buildPhases = (
+				2B87BFE32C31FE4A0008724A /* Sources */,
+				2B87BFE42C31FE4A0008724A /* Frameworks */,
+				2B87BFE52C31FE4A0008724A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B87BFE92C31FE4A0008724A /* PBXTargetDependency */,
+			);
+			name = TickerTests;
+			productName = TickerTests;
+			productReference = 2B87BFE72C31FE4A0008724A /* TickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B87BFF02C31FE4A0008724A /* TickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B87C02D2C31FE4B0008724A /* Build configuration list for PBXNativeTarget "TickerUITests" */;
+			buildPhases = (
+				2B87BFED2C31FE4A0008724A /* Sources */,
+				2B87BFEE2C31FE4A0008724A /* Frameworks */,
+				2B87BFEF2C31FE4A0008724A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B87BFF32C31FE4A0008724A /* PBXTargetDependency */,
+			);
+			name = TickerUITests;
+			productName = TickerUITests;
+			productReference = 2B87BFF12C31FE4A0008724A /* TickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		2B87BFFC2C31FE4A0008724A /* Ticker Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B87C0232C31FE4B0008724A /* Build configuration list for PBXNativeTarget "Ticker Watch App" */;
+			buildPhases = (
+				2B87BFF92C31FE4A0008724A /* Sources */,
+				2B87BFFA2C31FE4A0008724A /* Frameworks */,
+				2B87BFFB2C31FE4A0008724A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ticker Watch App";
+			productName = "Ticker Watch App";
+			productReference = 2B87BFFD2C31FE4A0008724A /* Ticker Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B87C00E2C31FE4B0008724A /* Ticker Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B87C0302C31FE4B0008724A /* Build configuration list for PBXNativeTarget "Ticker Watch AppTests" */;
+			buildPhases = (
+				2B87C00B2C31FE4B0008724A /* Sources */,
+				2B87C00C2C31FE4B0008724A /* Frameworks */,
+				2B87C00D2C31FE4B0008724A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B87C0112C31FE4B0008724A /* PBXTargetDependency */,
+			);
+			name = "Ticker Watch AppTests";
+			productName = "Ticker Watch AppTests";
+			productReference = 2B87C00F2C31FE4B0008724A /* Ticker Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B87C0182C31FE4B0008724A /* Ticker Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B87C0332C31FE4B0008724A /* Build configuration list for PBXNativeTarget "Ticker Watch AppUITests" */;
+			buildPhases = (
+				2B87C0152C31FE4B0008724A /* Sources */,
+				2B87C0162C31FE4B0008724A /* Frameworks */,
+				2B87C0172C31FE4B0008724A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B87C01B2C31FE4B0008724A /* PBXTargetDependency */,
+			);
+			name = "Ticker Watch AppUITests";
+			productName = "Ticker Watch AppUITests";
+			productReference = 2B87C0192C31FE4B0008724A /* Ticker Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B87BFCF2C31FE490008724A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					2B87BFD62C31FE490008724A = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					2B87BFE62C31FE4A0008724A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2B87BFD62C31FE490008724A;
+					};
+					2B87BFF02C31FE4A0008724A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2B87BFD62C31FE490008724A;
+					};
+					2B87BFFC2C31FE4A0008724A = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					2B87C00E2C31FE4B0008724A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2B87BFFC2C31FE4A0008724A;
+					};
+					2B87C0182C31FE4B0008724A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2B87BFFC2C31FE4A0008724A;
+					};
+				};
+			};
+			buildConfigurationList = 2B87BFD22C31FE490008724A /* Build configuration list for PBXProject "Ticker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B87BFCE2C31FE490008724A;
+			productRefGroup = 2B87BFD82C31FE490008724A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B87BFD62C31FE490008724A /* Ticker */,
+				2B87BFE62C31FE4A0008724A /* TickerTests */,
+				2B87BFF02C31FE4A0008724A /* TickerUITests */,
+				2B87BFFC2C31FE4A0008724A /* Ticker Watch App */,
+				2B87C00E2C31FE4B0008724A /* Ticker Watch AppTests */,
+				2B87C0182C31FE4B0008724A /* Ticker Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B87BFD52C31FE490008724A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87BFE22C31FE4A0008724A /* Preview Assets.xcassets in Resources */,
+				2B87BFDF2C31FE4A0008724A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87BFE52C31FE4A0008724A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87BFEF2C31FE4A0008724A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87BFFB2C31FE4A0008724A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87C00A2C31FE4B0008724A /* Preview Assets.xcassets in Resources */,
+				2B87C0072C31FE4B0008724A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87C00D2C31FE4B0008724A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87C0172C31FE4B0008724A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B87BFD32C31FE490008724A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87BFDD2C31FE490008724A /* ContentView.swift in Sources */,
+				2B87BFDB2C31FE490008724A /* TickerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87BFE32C31FE4A0008724A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87BFEC2C31FE4A0008724A /* TickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87BFED2C31FE4A0008724A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87BFF82C31FE4A0008724A /* TickerUITestsLaunchTests.swift in Sources */,
+				2B87BFF62C31FE4A0008724A /* TickerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87BFF92C31FE4A0008724A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87C0052C31FE4A0008724A /* ContentView.swift in Sources */,
+				2B87C0032C31FE4A0008724A /* TickerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87C00B2C31FE4B0008724A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87C0142C31FE4B0008724A /* Ticker_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B87C0152C31FE4B0008724A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87C0202C31FE4B0008724A /* Ticker_Watch_AppUITestsLaunchTests.swift in Sources */,
+				2B87C01E2C31FE4B0008724A /* Ticker_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B87BFE92C31FE4A0008724A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B87BFD62C31FE490008724A /* Ticker */;
+			targetProxy = 2B87BFE82C31FE4A0008724A /* PBXContainerItemProxy */;
+		};
+		2B87BFF32C31FE4A0008724A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B87BFD62C31FE490008724A /* Ticker */;
+			targetProxy = 2B87BFF22C31FE4A0008724A /* PBXContainerItemProxy */;
+		};
+		2B87C0002C31FE4A0008724A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B87BFFC2C31FE4A0008724A /* Ticker Watch App */;
+			targetProxy = 2B87BFFF2C31FE4A0008724A /* PBXContainerItemProxy */;
+		};
+		2B87C0112C31FE4B0008724A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B87BFFC2C31FE4A0008724A /* Ticker Watch App */;
+			targetProxy = 2B87C0102C31FE4B0008724A /* PBXContainerItemProxy */;
+		};
+		2B87C01B2C31FE4B0008724A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B87BFFC2C31FE4A0008724A /* Ticker Watch App */;
+			targetProxy = 2B87C01A2C31FE4B0008724A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2B87C0212C31FE4B0008724A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B87C0222C31FE4B0008724A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2B87C0242C31FE4B0008724A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ticker Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ticker;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.roedesigns.scanners.Ticker;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roedesigns.scanners.Ticker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		2B87C0252C31FE4B0008724A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ticker Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ticker;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.roedesigns.scanners.Ticker;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roedesigns.scanners.Ticker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		2B87C0282C31FE4B0008724A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ticker/Preview Content\"";
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ticker;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roedesigns.scanners.Ticker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B87C0292C31FE4B0008724A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ticker/Preview Content\"";
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ticker;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roedesigns.scanners.Ticker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B87C02B2C31FE4B0008724A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roedesigns.scanners.TickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ticker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ticker";
+			};
+			name = Debug;
+		};
+		2B87C02C2C31FE4B0008724A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roedesigns.scanners.TickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ticker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ticker";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B87C02E2C31FE4B0008724A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roedesigns.scanners.TickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ticker;
+			};
+			name = Debug;
+		};
+		2B87C02F2C31FE4B0008724A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roedesigns.scanners.TickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ticker;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B87C0312C31FE4B0008724A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roedesigns.scanners.Ticker-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ticker Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ticker Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		2B87C0322C31FE4B0008724A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roedesigns.scanners.Ticker-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ticker Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ticker Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		2B87C0342C31FE4B0008724A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roedesigns.scanners.Ticker-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Ticker Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		2B87C0352C31FE4B0008724A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UU7QAR4ZXB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roedesigns.scanners.Ticker-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Ticker Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B87BFD22C31FE490008724A /* Build configuration list for PBXProject "Ticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B87C0212C31FE4B0008724A /* Debug */,
+				2B87C0222C31FE4B0008724A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B87C0232C31FE4B0008724A /* Build configuration list for PBXNativeTarget "Ticker Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B87C0242C31FE4B0008724A /* Debug */,
+				2B87C0252C31FE4B0008724A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B87C0272C31FE4B0008724A /* Build configuration list for PBXNativeTarget "Ticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B87C0282C31FE4B0008724A /* Debug */,
+				2B87C0292C31FE4B0008724A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B87C02A2C31FE4B0008724A /* Build configuration list for PBXNativeTarget "TickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B87C02B2C31FE4B0008724A /* Debug */,
+				2B87C02C2C31FE4B0008724A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B87C02D2C31FE4B0008724A /* Build configuration list for PBXNativeTarget "TickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B87C02E2C31FE4B0008724A /* Debug */,
+				2B87C02F2C31FE4B0008724A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B87C0302C31FE4B0008724A /* Build configuration list for PBXNativeTarget "Ticker Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B87C0312C31FE4B0008724A /* Debug */,
+				2B87C0322C31FE4B0008724A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B87C0332C31FE4B0008724A /* Build configuration list for PBXNativeTarget "Ticker Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B87C0342C31FE4B0008724A /* Debug */,
+				2B87C0352C31FE4B0008724A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B87BFCF2C31FE490008724A /* Project object */;
+}
