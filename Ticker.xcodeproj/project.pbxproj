@@ -37,6 +37,8 @@
 		2BAC965D2C3376DC001E0303 /* CoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965C2C3376DC001E0303 /* CoreContentView.swift */; };
 		2BAC96602C337B39001E0303 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965F2C337B39001E0303 /* Phase.swift */; };
 		2BAC96612C337B40001E0303 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965F2C337B39001E0303 /* Phase.swift */; };
+		2BE793D22C3C7D97005A5E3C /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */; };
+		2BE793D32C3C7D97005A5E3C /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,7 @@
 		2B87C01F2C31FE4B0008724A /* Ticker_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2BAC965C2C3376DC001E0303 /* CoreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreContentView.swift; sourceTree = "<group>"; };
 		2BAC965F2C337B39001E0303 /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
+		2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +293,7 @@
 				2BAC965C2C3376DC001E0303 /* CoreContentView.swift */,
 				2BAC965F2C337B39001E0303 /* Phase.swift */,
 				2B2DD8A12C3650E400EE74A2 /* Audio.swift */,
+				2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -528,6 +532,7 @@
 			files = (
 				2B87BFDD2C31FE490008724A /* ContentView.swift in Sources */,
 				2B87BFDB2C31FE490008724A /* TickerApp.swift in Sources */,
+				2BE793D22C3C7D97005A5E3C /* SoundEffects.swift in Sources */,
 				2BAC965D2C3376DC001E0303 /* CoreContentView.swift in Sources */,
 				2BAC96602C337B39001E0303 /* Phase.swift in Sources */,
 				2B2DD8A22C3650E400EE74A2 /* Audio.swift in Sources */,
@@ -558,6 +563,7 @@
 				2B2DD8A32C3650EA00EE74A2 /* Audio.swift in Sources */,
 				2B87C0052C31FE4A0008724A /* ContentView.swift in Sources */,
 				2B87C0032C31FE4A0008724A /* TickerApp.swift in Sources */,
+				2BE793D32C3C7D97005A5E3C /* SoundEffects.swift in Sources */,
 				2BAC96612C337B40001E0303 /* Phase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,17 +13,10 @@ struct ContentView: View {
     @State var activeToggle = false
     @State var phase = Phase()
     @State var repCount = 0
-    var engageSoundEffect: AVAudioPlayer? = nil
-    var pauseSoundEffect: AVAudioPlayer? = nil
-    var returnSoundEffect: AVAudioPlayer? = nil
-    var pause2SoundEffect: AVAudioPlayer? = nil
+    let soundEffects: SoundEffects = SoundEffects()
     
     init () {
         stopTimer()
-        engageSoundEffect = makeAudioPlayer(filename: "engage.wav")
-        pauseSoundEffect = makeAudioPlayer(filename: "pause.wav")
-        returnSoundEffect = makeAudioPlayer(filename: "return.wav")
-        pause2SoundEffect = makeAudioPlayer(filename: "pause2.wav")
      }
     
     var body: some View {
@@ -52,20 +45,16 @@ struct ContentView: View {
                 Text("Reps: \(repCount)")
                     .padding()
                     .onChange(of: phase.oneStart) {
-                        engageSoundEffect?.stop()
-                        engageSoundEffect?.play()
+                        soundEffects.replay(name: "engage")
                     }
                     .onChange(of: phase.oneRest) {
-                        pauseSoundEffect?.stop()
-                        pauseSoundEffect?.play()
+                        soundEffects.replay(name: "pause")
                     }
                     .onChange(of: phase.twoStart) {
-                        returnSoundEffect?.stop()
-                        returnSoundEffect?.play()
+                        soundEffects.replay(name: "return")
                     }
                     .onChange(of: phase.twoRest) {
-                        pause2SoundEffect?.stop()
-                        pause2SoundEffect?.play()
+                        soundEffects.replay(name: "pause2")
                     }
            }
 
