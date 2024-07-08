@@ -17,7 +17,7 @@ import Foundation
     var completed = 0
 
     func reset() {
-        phase = -2
+        phase = -3
     }
     
     func advance() {
@@ -48,7 +48,7 @@ import Foundation
         case 2: return "Pause"
         case 3, 4: return "Return"
         case 5: return "Pause"
-        default: return "Ready \(phase)"
+        default: return "Ready \(-phase)"
         }
     }
 }
