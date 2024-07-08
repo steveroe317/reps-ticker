@@ -13,7 +13,7 @@ struct Ticker_Watch_AppApp: App {
 
     init() {
         do {
-            try AVAudioSession.sharedInstance().setCategory(.playAndRecord, options: .allowBluetoothA2DP)
+            try AVAudioSession.sharedInstance().setCategory(.playback, options: .allowBluetoothA2DP)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print(error.localizedDescription)
