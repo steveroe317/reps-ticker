@@ -6,21 +6,19 @@
 //
 
 import AVFoundation
-import Combine
 import SwiftUI
 
 struct CoreContentView: View {
-    let fontSize: CGFloat = 36
-    let imageFontSize: CGFloat = 90
+    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var activeToggle = false
+    @State var phase = Phase()
+    @State var repCount = 0
     var engageSoundEffect: AVAudioPlayer? = nil
     var pauseSoundEffect: AVAudioPlayer? = nil
     var returnSoundEffect: AVAudioPlayer? = nil
     var pause2SoundEffect: AVAudioPlayer? = nil
-    @State var activeToggle = false
-    @State var phase = Phase()
-    @State var repCount = 0
-    //@State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let fontSize: CGFloat = 36
+    let imageFontSize: CGFloat = 90
 
     init () {
         stopTimer()
@@ -101,10 +99,6 @@ struct CoreContentView: View {
     func stopTimer() {
         timer.upstream.connect().cancel()
     }
-    
-//    func playSystemSound(id: UInt32) {
-//        AudioServicesPlaySystemSound(id)
-//    }
 }
 
 #Preview {

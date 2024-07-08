@@ -10,18 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var activeToggle = false
+    @State var phase = Phase()
+    @State var repCount = 0
     var engageSoundEffect: AVAudioPlayer? = nil
     var pauseSoundEffect: AVAudioPlayer? = nil
     var returnSoundEffect: AVAudioPlayer? = nil
     var pause2SoundEffect: AVAudioPlayer? = nil
-    @State var activeToggle = false
-    @State var feedbackEngage = 0
-    @State var feedbackReturn = 0
-    @State var feedbackPause = 0
-//    @State var phase = -2
-//    @State var prevPhase = -2
-    @State var phase = Phase()
-    @State var repCount = 0
     
     init () {
         stopTimer()
@@ -56,9 +51,6 @@ struct ContentView: View {
                 .padding()
                 Text("Reps: \(repCount)")
                     .padding()
-                    .sensoryFeedback(.start, trigger: feedbackReturn)
-                    .sensoryFeedback(.stop, trigger: feedbackEngage)
-                    .sensoryFeedback(.decrease, trigger: feedbackPause)
                     .onChange(of: phase.oneStart) {
                         engageSoundEffect?.stop()
                         engageSoundEffect?.play()
@@ -98,16 +90,6 @@ struct ContentView: View {
     func stopTimer() {
         timer.upstream.connect().cancel()
     }
-    
-//    func phaseLabel() -> String {
-//        switch phase {
-//        case 0, 1, 2: return "Engage"
-//        case 3, 4: return "Pause"
-//        case 5, 6, 7: return "Return"
-//        case 8, 9: return "Pause"
-//        default: return "Ready"
-//        }
-//    }
 }
 
 #Preview {
