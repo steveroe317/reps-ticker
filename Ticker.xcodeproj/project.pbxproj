@@ -39,6 +39,9 @@
 		2BAC96612C337B40001E0303 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965F2C337B39001E0303 /* Phase.swift */; };
 		2BE793D22C3C7D97005A5E3C /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */; };
 		2BE793D32C3C7D97005A5E3C /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */; };
+		2BE793D52C3D8325005A5E3C /* RepCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D42C3D8325005A5E3C /* RepCounter.swift */; };
+		2BE793D62C3D8325005A5E3C /* RepCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D42C3D8325005A5E3C /* RepCounter.swift */; };
+		2BE793D72C3DA0B5005A5E3C /* CoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965C2C3376DC001E0303 /* CoreContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +128,7 @@
 		2BAC965C2C3376DC001E0303 /* CoreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreContentView.swift; sourceTree = "<group>"; };
 		2BAC965F2C337B39001E0303 /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
 		2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
+		2BE793D42C3D8325005A5E3C /* RepCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +298,7 @@
 				2BAC965F2C337B39001E0303 /* Phase.swift */,
 				2B2DD8A12C3650E400EE74A2 /* Audio.swift */,
 				2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */,
+				2BE793D42C3D8325005A5E3C /* RepCounter.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				2BAC965D2C3376DC001E0303 /* CoreContentView.swift in Sources */,
 				2BAC96602C337B39001E0303 /* Phase.swift in Sources */,
 				2B2DD8A22C3650E400EE74A2 /* Audio.swift in Sources */,
+				2BE793D52C3D8325005A5E3C /* RepCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,8 +568,10 @@
 			files = (
 				2B2DD8A32C3650EA00EE74A2 /* Audio.swift in Sources */,
 				2B87C0052C31FE4A0008724A /* ContentView.swift in Sources */,
+				2BE793D62C3D8325005A5E3C /* RepCounter.swift in Sources */,
 				2B87C0032C31FE4A0008724A /* TickerApp.swift in Sources */,
 				2BE793D32C3C7D97005A5E3C /* SoundEffects.swift in Sources */,
+				2BE793D72C3DA0B5005A5E3C /* CoreContentView.swift in Sources */,
 				2BAC96612C337B40001E0303 /* Phase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

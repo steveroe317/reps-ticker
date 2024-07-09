@@ -8,17 +8,13 @@
 import Foundation
 
 @Observable class Phase {
-    var phase = -2
+    var phase = -3
     var final = false
     var oneStart = 0
     var oneRest = 0
     var twoStart = 0
     var twoRest = 0
     var completed = 0
-
-    func reset() {
-        phase = -3
-    }
     
     func advance() {
         // Advance phase. Publish a complete event on roll over.
