@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CoreContentView: View {
     @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var speaker = AVSpeechSynthesizer()
     @State var activeToggle = false
     @State var phase = Phase()
     @State var repCount = 0
@@ -52,13 +53,13 @@ struct CoreContentView: View {
                         .font(.custom("SF Pro", size: fontSize))
                         .padding(.bottom)
                         .onChange(of: phase.oneStart) {
-                            soundEffects.replay(name: "engage")
+                            speaker.speak(AVSpeechUtterance(string: String(repCount + 1)))
                         }
                         .onChange(of: phase.oneRest) {
                             soundEffects.replay(name: "pause")
                         }
                         .onChange(of: phase.twoStart) {
-                            soundEffects.replay(name: "return")
+                            soundEffects.replay(name: "engage")
                         }
                         .onChange(of: phase.twoRest) {
                             soundEffects.replay(name: "pause2")
@@ -71,6 +72,7 @@ struct CoreContentView: View {
                         phase.reset()
                         repCount = 0
                         startTimer()
+                        speaker.speak(AVSpeechUtterance(string: "ready"))
                     } else {
                         stopTimer()
                     }
