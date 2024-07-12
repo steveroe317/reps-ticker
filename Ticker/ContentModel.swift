@@ -1,6 +1,6 @@
 //
 //  ContentModel.swift
-//  Ticker Watch App
+//  Ticker
 //
 //  Created by Steve Roe on 7/11/24.
 //
@@ -12,7 +12,6 @@ import SwiftUI
 final class ContentModel: NSObject {
     var count = 0
     var phase = Phase()
-    private var session: WKExtendedRuntimeSession!
     private var timer: Timer!
     let soundEffects: SoundEffects = SoundEffects()
     let speaker = AVSpeechSynthesizer()
@@ -23,21 +22,7 @@ final class ContentModel: NSObject {
     }
     
     private func startCounting() {
-        session = WKExtendedRuntimeSession()
-        session.delegate = self
-        session.start()
         speaker.speak(AVSpeechUtterance(string: "ready"))
-    }
-    
-    func stopCounting() {
-        session.invalidate()
-    }
-}
-
-extension ContentModel: WKExtendedRuntimeSessionDelegate {
-    
-    func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
-        print("didStart")
         timer = Timer(timeInterval: 1, repeats: true) { _ in
             if self.phase.atEnd() {
                 self.count += 1
@@ -56,10 +41,7 @@ extension ContentModel: WKExtendedRuntimeSessionDelegate {
         RunLoop.main.add(timer, forMode: .common)
     }
     
-    func extendedRuntimeSessionWillExpire(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
-    }
-    
-    func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: (any Error)?) {
+    func stopCounting() {
         timer.invalidate()
         timer = nil
     }

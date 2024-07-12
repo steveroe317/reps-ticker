@@ -8,7 +8,7 @@
 import AVFoundation
 import SwiftUI
 
-struct WatchRepView: View {
+struct RepCounterView: View {
     @Binding var counting: Bool
     @Binding var repCount: Int
     @State var model = ContentModel()
@@ -31,5 +31,5 @@ struct WatchRepView: View {
 #Preview {
     @State var counting = true
     @State var repCount = 0
-    return WatchRepView(counting: $counting, repCount: $repCount)
+    return RepCounterView(counting: $counting, repCount: $repCount)
 }

@@ -9,36 +9,14 @@ import Foundation
 
 @Observable class Phase {
     var phase = -3
-    var final = false
-    var oneStart = 0
-    var oneRest = 0
-    var twoStart = 0
-    var twoRest = 0
-    var completed = 0
     
     func advance() {
-        // Advance phase. Publish a complete event on roll over.
         if phase < 5 {
             phase += 1
         } else {
             phase = 0
-            completed += 1
-        }
-        final = (phase == 5)
-
-        // Publish start and rest events.
-        if phase == 0 {
-            oneStart += 1
-        } else if phase == 2 {
-            oneRest += 1
-        } else if phase == 3 {
-            twoStart += 1
-        } else if phase == 5 {
-            twoRest += 1
         }
     }
-    
-    // TODO: use at*() functions in advance()
     
     func atEngage() -> Bool {
         return phase == 0
@@ -53,6 +31,10 @@ import Foundation
     }
     
     func atBackPause () -> Bool {
+        return phase == 5
+    }
+    
+    func atEnd() -> Bool {
         return phase == 5
     }
     

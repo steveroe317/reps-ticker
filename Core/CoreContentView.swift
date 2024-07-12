@@ -21,7 +21,7 @@ struct CoreContentView: View {
                 .font(.custom("SF Pro", size: imageFontSize))
                 .padding(.bottom)
             if repCounterActive {
-                RepCounter(counting: $repCounterActive, repCount: $repCount)
+                RepCounterView(counting: $repCounterActive, repCount: $repCount)
             } else {
                 Text("Exercise Timer").padding()
                 Text("Last Reps: \(repCount)")
