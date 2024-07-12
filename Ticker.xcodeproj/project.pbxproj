@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B2BDCEE2C40B58200D19814 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BDCED2C40B58200D19814 /* ContentModel.swift */; };
 		2B2DD8982C36287700EE74A2 /* clap-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD8972C36287700EE74A2 /* clap-1.wav */; };
 		2B2DD89A2C3638AA00EE74A2 /* pause.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD8992C3638AA00EE74A2 /* pause.wav */; };
 		2B2DD89C2C3638B000EE74A2 /* return.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD89B2C3638B000EE74A2 /* return.wav */; };
@@ -34,14 +35,14 @@
 		2B87C0142C31FE4B0008724A /* Ticker_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C0132C31FE4B0008724A /* Ticker_Watch_AppTests.swift */; };
 		2B87C01E2C31FE4B0008724A /* Ticker_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C01D2C31FE4B0008724A /* Ticker_Watch_AppUITests.swift */; };
 		2B87C0202C31FE4B0008724A /* Ticker_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C01F2C31FE4B0008724A /* Ticker_Watch_AppUITestsLaunchTests.swift */; };
+		2B93E5922C40BA2A00938677 /* WatchCoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93E5912C40BA2A00938677 /* WatchCoreContentView.swift */; };
+		2B93E5942C40BA6B00938677 /* WatchRepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93E5932C40BA6B00938677 /* WatchRepView.swift */; };
 		2BAC965D2C3376DC001E0303 /* CoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965C2C3376DC001E0303 /* CoreContentView.swift */; };
 		2BAC96602C337B39001E0303 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965F2C337B39001E0303 /* Phase.swift */; };
 		2BAC96612C337B40001E0303 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965F2C337B39001E0303 /* Phase.swift */; };
 		2BE793D22C3C7D97005A5E3C /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */; };
 		2BE793D32C3C7D97005A5E3C /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */; };
 		2BE793D52C3D8325005A5E3C /* RepCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D42C3D8325005A5E3C /* RepCounter.swift */; };
-		2BE793D62C3D8325005A5E3C /* RepCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D42C3D8325005A5E3C /* RepCounter.swift */; };
-		2BE793D72C3DA0B5005A5E3C /* CoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965C2C3376DC001E0303 /* CoreContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 
 /* Begin PBXFileReference section */
 		2B0ACE232C3657F7003395B0 /* Ticker-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Ticker-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2B2BDCED2C40B58200D19814 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		2B2DD8952C361F4800EE74A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2B2DD8972C36287700EE74A2 /* clap-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "clap-1.wav"; sourceTree = "<group>"; };
 		2B2DD8992C3638AA00EE74A2 /* pause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pause.wav; sourceTree = "<group>"; };
@@ -125,6 +127,8 @@
 		2B87C0192C31FE4B0008724A /* Ticker Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ticker Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B87C01D2C31FE4B0008724A /* Ticker_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		2B87C01F2C31FE4B0008724A /* Ticker_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B93E5912C40BA2A00938677 /* WatchCoreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCoreContentView.swift; sourceTree = "<group>"; };
+		2B93E5932C40BA6B00938677 /* WatchRepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchRepView.swift; sourceTree = "<group>"; };
 		2BAC965C2C3376DC001E0303 /* CoreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreContentView.swift; sourceTree = "<group>"; };
 		2BAC965F2C337B39001E0303 /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
 		2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
@@ -260,6 +264,9 @@
 				2B0ACE232C3657F7003395B0 /* Ticker-Watch-App-Info.plist */,
 				2B87C0022C31FE4A0008724A /* TickerApp.swift */,
 				2B87C0042C31FE4A0008724A /* ContentView.swift */,
+				2B2BDCED2C40B58200D19814 /* ContentModel.swift */,
+				2B93E5912C40BA2A00938677 /* WatchCoreContentView.swift */,
+				2B93E5932C40BA6B00938677 /* WatchRepView.swift */,
 				2B87C0062C31FE4B0008724A /* Assets.xcassets */,
 				2B87C0082C31FE4B0008724A /* Preview Content */,
 			);
@@ -567,11 +574,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B2DD8A32C3650EA00EE74A2 /* Audio.swift in Sources */,
+				2B2BDCEE2C40B58200D19814 /* ContentModel.swift in Sources */,
+				2B93E5922C40BA2A00938677 /* WatchCoreContentView.swift in Sources */,
 				2B87C0052C31FE4A0008724A /* ContentView.swift in Sources */,
-				2BE793D62C3D8325005A5E3C /* RepCounter.swift in Sources */,
+				2B93E5942C40BA6B00938677 /* WatchRepView.swift in Sources */,
 				2B87C0032C31FE4A0008724A /* TickerApp.swift in Sources */,
 				2BE793D32C3C7D97005A5E3C /* SoundEffects.swift in Sources */,
-				2BE793D72C3DA0B5005A5E3C /* CoreContentView.swift in Sources */,
 				2BAC96612C337B40001E0303 /* Phase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

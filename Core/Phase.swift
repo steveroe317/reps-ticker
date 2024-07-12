@@ -38,11 +38,29 @@ import Foundation
         }
     }
     
+    // TODO: use at*() functions in advance()
+    
+    func atEngage() -> Bool {
+        return phase == 0
+    }
+    
+    func atEngagePause() -> Bool {
+        return phase == 2
+    }
+    
+    func atBack() -> Bool {
+        return phase == 3
+    }
+    
+    func atBackPause () -> Bool {
+        return phase == 5
+    }
+    
     func label() -> String {
         switch phase {
         case 0, 1: return "Engage"
         case 2: return "Pause"
-        case 3, 4: return "Return"
+        case 3, 4: return "Back"
         case 5: return "Pause"
         default: return "Ready \(-phase)"
         }
