@@ -21,6 +21,11 @@ final class ContentModel: NSObject {
         super.init()
         startCounting()
     }
+
+    deinit {
+        timer?.invalidate()
+        timer = nil
+    }
     
     private func startCounting() {
         session = WKExtendedRuntimeSession()
@@ -30,6 +35,8 @@ final class ContentModel: NSObject {
     }
     
     func stopCounting() {
+        timer.invalidate()
+        timer = nil
         session.invalidate()
     }
 }
@@ -37,7 +44,6 @@ final class ContentModel: NSObject {
 extension ContentModel: WKExtendedRuntimeSessionDelegate {
     
     func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
-        print("didStart")
         timer = Timer(timeInterval: 1, repeats: true) { _ in
             self.phase.advance()
             if self.phase.CycleCompleted() {
@@ -60,7 +66,7 @@ extension ContentModel: WKExtendedRuntimeSessionDelegate {
     }
     
     func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: (any Error)?) {
-        timer.invalidate()
+        timer?.invalidate()
         timer = nil
     }
 }
