@@ -9,12 +9,15 @@ import Foundation
 
 @Observable class Phase {
     var phase = -3
+    private var cycleCompleted = false
     
     func advance() {
         if phase < 5 {
             phase += 1
+            cycleCompleted = false
         } else {
             phase = 0
+            cycleCompleted = true
         }
     }
     
@@ -34,8 +37,8 @@ import Foundation
         return phase == 5
     }
     
-    func atEnd() -> Bool {
-        return phase == 5
+    func CycleCompleted() -> Bool {
+        return cycleCompleted
     }
     
     func label() -> String {

@@ -39,10 +39,10 @@ extension ContentModel: WKExtendedRuntimeSessionDelegate {
     func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
         print("didStart")
         timer = Timer(timeInterval: 1, repeats: true) { _ in
-            if self.phase.atEnd() {
+            self.phase.advance()
+            if self.phase.CycleCompleted() {
                 self.count += 1
             }
-            self.phase.advance()
             if (self.phase.atEngage()) {
                 self.speaker.speak(AVSpeechUtterance(string: String(self.count + 1)))
             } else if (self.phase.atEngagePause()) {
