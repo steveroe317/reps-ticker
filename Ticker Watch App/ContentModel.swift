@@ -52,11 +52,11 @@ extension ContentModel: WKExtendedRuntimeSessionDelegate {
             if (self.phase.atEngage()) {
                 self.speaker.speak(AVSpeechUtterance(string: String(self.count + 1)))
             } else if (self.phase.atEngagePause()) {
-                self.soundEffects.replay(name: "pause")
+                self.soundEffects.replay(name: "a3-note")
             } else if (self.phase.atBack()) {
-                self.soundEffects.replay(name: "engage")
+                self.soundEffects.replay(name: "a4-note")
             } else if (self.phase.atBackPause()) {
-                self.soundEffects.replay(name: "pause2")
+                self.soundEffects.replay(name: "a3-note")
             }
         }
         RunLoop.main.add(timer, forMode: .common)

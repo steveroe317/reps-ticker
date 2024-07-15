@@ -8,18 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B2BDCEE2C40B58200D19814 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BDCED2C40B58200D19814 /* ContentModel.swift */; };
-		2B2DD8982C36287700EE74A2 /* clap-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD8972C36287700EE74A2 /* clap-1.wav */; };
-		2B2DD89A2C3638AA00EE74A2 /* pause.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD8992C3638AA00EE74A2 /* pause.wav */; };
-		2B2DD89C2C3638B000EE74A2 /* return.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD89B2C3638B000EE74A2 /* return.wav */; };
-		2B2DD89E2C3638B700EE74A2 /* engage.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD89D2C3638B700EE74A2 /* engage.wav */; };
-		2B2DD8A02C363B6E00EE74A2 /* pause2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD89F2C363B6D00EE74A2 /* pause2.wav */; };
 		2B2DD8A22C3650E400EE74A2 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2DD8A12C3650E400EE74A2 /* Audio.swift */; };
 		2B2DD8A32C3650EA00EE74A2 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2DD8A12C3650E400EE74A2 /* Audio.swift */; };
-		2B2DD8A42C3652EB00EE74A2 /* pause.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD8992C3638AA00EE74A2 /* pause.wav */; };
-		2B2DD8A52C3652EB00EE74A2 /* clap-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD8972C36287700EE74A2 /* clap-1.wav */; };
-		2B2DD8A62C3652EB00EE74A2 /* engage.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD89D2C3638B700EE74A2 /* engage.wav */; };
-		2B2DD8A72C3652EB00EE74A2 /* return.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD89B2C3638B000EE74A2 /* return.wav */; };
-		2B2DD8A82C3652EB00EE74A2 /* pause2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2DD89F2C363B6D00EE74A2 /* pause2.wav */; };
 		2B63F23A2C40E15800A2AA39 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63F2392C40E15800A2AA39 /* ContentModel.swift */; };
 		2B63F23B2C40E26F00A2AA39 /* RepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93E5932C40BA6B00938677 /* RepCounterView.swift */; };
 		2B87BFDB2C31FE490008724A /* TickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87BFDA2C31FE490008724A /* TickerApp.swift */; };
@@ -42,6 +32,10 @@
 		2BAC965D2C3376DC001E0303 /* CoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965C2C3376DC001E0303 /* CoreContentView.swift */; };
 		2BAC96602C337B39001E0303 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965F2C337B39001E0303 /* Phase.swift */; };
 		2BAC96612C337B40001E0303 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC965F2C337B39001E0303 /* Phase.swift */; };
+		2BCE068A2C457094008B7B2D /* A3-220Hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BCE06892C457094008B7B2D /* A3-220Hz.wav */; };
+		2BCE068B2C457094008B7B2D /* A3-220Hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BCE06892C457094008B7B2D /* A3-220Hz.wav */; };
+		2BCE068D2C457173008B7B2D /* A4-440Hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BCE068C2C457173008B7B2D /* A4-440Hz.wav */; };
+		2BCE068E2C457173008B7B2D /* A4-440Hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BCE068C2C457173008B7B2D /* A4-440Hz.wav */; };
 		2BE793D22C3C7D97005A5E3C /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */; };
 		2BE793D32C3C7D97005A5E3C /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */; };
 /* End PBXBuildFile section */
@@ -102,11 +96,6 @@
 		2B0ACE232C3657F7003395B0 /* Ticker-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Ticker-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2B2BDCED2C40B58200D19814 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		2B2DD8952C361F4800EE74A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		2B2DD8972C36287700EE74A2 /* clap-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "clap-1.wav"; sourceTree = "<group>"; };
-		2B2DD8992C3638AA00EE74A2 /* pause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pause.wav; sourceTree = "<group>"; };
-		2B2DD89B2C3638B000EE74A2 /* return.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = return.wav; sourceTree = "<group>"; };
-		2B2DD89D2C3638B700EE74A2 /* engage.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = engage.wav; sourceTree = "<group>"; };
-		2B2DD89F2C363B6D00EE74A2 /* pause2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pause2.wav; sourceTree = "<group>"; };
 		2B2DD8A12C3650E400EE74A2 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		2B63F2392C40E15800A2AA39 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		2B87BFD72C31FE490008724A /* Ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +121,8 @@
 		2B93E5932C40BA6B00938677 /* RepCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterView.swift; sourceTree = "<group>"; };
 		2BAC965C2C3376DC001E0303 /* CoreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreContentView.swift; sourceTree = "<group>"; };
 		2BAC965F2C337B39001E0303 /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
+		2BCE06892C457094008B7B2D /* A3-220Hz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "A3-220Hz.wav"; sourceTree = "<group>"; };
+		2BCE068C2C457173008B7B2D /* A4-440Hz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "A4-440Hz.wav"; sourceTree = "<group>"; };
 		2BE793D12C3C7D97005A5E3C /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,11 +175,8 @@
 		2B2DD8962C36284F00EE74A2 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				2B2DD8972C36287700EE74A2 /* clap-1.wav */,
-				2B2DD89D2C3638B700EE74A2 /* engage.wav */,
-				2B2DD8992C3638AA00EE74A2 /* pause.wav */,
-				2B2DD89F2C363B6D00EE74A2 /* pause2.wav */,
-				2B2DD89B2C3638B000EE74A2 /* return.wav */,
+				2BCE068C2C457173008B7B2D /* A4-440Hz.wav */,
+				2BCE06892C457094008B7B2D /* A3-220Hz.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -483,12 +471,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B87BFE22C31FE4A0008724A /* Preview Assets.xcassets in Resources */,
-				2B2DD89E2C3638B700EE74A2 /* engage.wav in Resources */,
+				2BCE068D2C457173008B7B2D /* A4-440Hz.wav in Resources */,
 				2B87BFDF2C31FE4A0008724A /* Assets.xcassets in Resources */,
-				2B2DD8A02C363B6E00EE74A2 /* pause2.wav in Resources */,
-				2B2DD8982C36287700EE74A2 /* clap-1.wav in Resources */,
-				2B2DD89A2C3638AA00EE74A2 /* pause.wav in Resources */,
-				2B2DD89C2C3638B000EE74A2 /* return.wav in Resources */,
+				2BCE068A2C457094008B7B2D /* A3-220Hz.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,12 +495,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B2DD8A42C3652EB00EE74A2 /* pause.wav in Resources */,
-				2B2DD8A52C3652EB00EE74A2 /* clap-1.wav in Resources */,
-				2B2DD8A62C3652EB00EE74A2 /* engage.wav in Resources */,
-				2B2DD8A72C3652EB00EE74A2 /* return.wav in Resources */,
-				2B2DD8A82C3652EB00EE74A2 /* pause2.wav in Resources */,
+				2BCE068E2C457173008B7B2D /* A4-440Hz.wav in Resources */,
 				2B87C00A2C31FE4B0008724A /* Preview Assets.xcassets in Resources */,
+				2BCE068B2C457094008B7B2D /* A3-220Hz.wav in Resources */,
 				2B87C0072C31FE4B0008724A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

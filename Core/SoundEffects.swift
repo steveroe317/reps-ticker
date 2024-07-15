@@ -9,10 +9,8 @@ import AVFoundation
 
 class SoundEffects {
     var sounds = [
-        "engage": makeAudioPlayer(filename: "engage.wav"),
-        "pause": makeAudioPlayer(filename: "pause.wav"),
-        "return": makeAudioPlayer(filename: "return.wav"),
-        "pause2": makeAudioPlayer(filename: "pause2.wav")
+        "a4-note": makeAudioPlayer(filename: "A4-440Hz.wav"),
+        "a3-note": makeAudioPlayer(filename: "A3-220Hz.wav"),
     ]
     
     func replay(name: String) {
