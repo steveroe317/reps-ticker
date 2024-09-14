@@ -8,6 +8,9 @@
 import AVFoundation
 import SwiftUI
 
+/// Exercise rep counter view.
+///
+/// Shows rep phase, rep count, and a stop button.
 struct RepCounterView: View {
     @Binding var counting: Bool
     @Binding var repCount: Int

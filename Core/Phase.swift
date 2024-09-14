@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Phases of an exercise rep; engage, pause, return, pause.
 @Observable class Phase {
     var phase = -3
     private var cycleCompleted = false

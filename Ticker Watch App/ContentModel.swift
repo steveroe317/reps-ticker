@@ -9,14 +9,20 @@ import AVFoundation
 import SwiftUI
 
 @Observable
+/// Times an exercise set reps with auditory cues and counts.
+///
+/// This class is different in iOS/ipadOS and watchOS due to differences in background task
+/// task handling, but much code is duplicated between the two classes.
+///
+/// TODO: Refactor to reduce duplicated code. Maybe use a protocol and a factory method in clients.
 final class ContentModel: NSObject {
     var count = 0
     var phase = Phase()
-    private var session: WKExtendedRuntimeSession!
-    private var timer: Timer!
+    private var timer: Timer?
     let soundEffects: SoundEffects = SoundEffects()
     let speaker = AVSpeechSynthesizer()
-    
+    private var session: WKExtendedRuntimeSession!
+
     override init () {
         super.init()
         startCounting()
@@ -35,7 +41,7 @@ final class ContentModel: NSObject {
     }
     
     func stopCounting() {
-        timer.invalidate()
+        timer?.invalidate()
         timer = nil
         session.invalidate()
     }
@@ -59,7 +65,10 @@ extension ContentModel: WKExtendedRuntimeSessionDelegate {
                 self.soundEffects.replay(name: "a3-note")
             }
         }
-        RunLoop.main.add(timer, forMode: .common)
+        guard timer != nil else {
+            return
+        }
+        RunLoop.main.add(timer!, forMode: .common)
     }
     
     func extendedRuntimeSessionWillExpire(_ extendedRuntimeSession: WKExtendedRuntimeSession) {

@@ -9,6 +9,12 @@ import AVFoundation
 import SwiftUI
 
 @Observable
+/// Times an exercise set reps with auditory cues and counts.
+///
+/// This class is different in iOS/ipadOS and watchOS due to differences in background task
+/// task handling, but much code is duplicated between the two classes.
+///
+/// TODO: Refactor to reduce duplicated code. Maybe use a protocol and a factory method in clients.
 final class ContentModel: NSObject {
     var count = 0
     var phase = Phase()

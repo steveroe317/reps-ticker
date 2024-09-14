@@ -8,6 +8,7 @@
 import AVFoundation
 import SwiftUI
 
+/// Common exercise counter view used by iPad, iPhone, and watch apps.
 struct CoreContentView: View {
     @State private var repCounterActive = false
     @State private var repCount = 0

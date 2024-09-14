@@ -10,7 +10,6 @@ import SwiftUI
 
 @main
 struct TickerApp: App {
-    
     init() {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playAndRecord, options: .allowBluetoothA2DP)

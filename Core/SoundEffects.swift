@@ -7,6 +7,7 @@
 
 import AVFoundation
 
+/// Audio sound effects for rep phases.
 class SoundEffects {
     var sounds = [
         "a4-note": makeAudioPlayer(filename: "A4-440Hz.wav"),
