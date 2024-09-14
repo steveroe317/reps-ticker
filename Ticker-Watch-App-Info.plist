@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>The RepsTicker app uses Apple Health entitlements to play audio in the background. It does not require access to health data.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>The RepsTicker app uses Apple Health entitlements to play audio in the background. It does not update health data.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
