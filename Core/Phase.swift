@@ -9,33 +9,33 @@ import Foundation
 
 /// Phases of an exercise rep; engage, pause, return, pause.
 @Observable class Phase {
-    var phase = -3
+    private var value = -3
     private var cycleCompleted = false
     
     func advance() {
-        if phase < 5 {
-            phase += 1
+        if value < 5 {
+            value += 1
             cycleCompleted = false
         } else {
-            phase = 0
+            value = 0
             cycleCompleted = true
         }
     }
     
     func atEngage() -> Bool {
-        return phase == 0
+        return value == 0
     }
     
     func atEngagePause() -> Bool {
-        return phase == 2
+        return value == 2
     }
     
     func atBack() -> Bool {
-        return phase == 3
+        return value == 3
     }
     
     func atBackPause () -> Bool {
-        return phase == 5
+        return value == 5
     }
     
     func CycleCompleted() -> Bool {
@@ -43,12 +43,12 @@ import Foundation
     }
     
     func label() -> String {
-        switch phase {
+        switch value {
         case 0, 1: return "Engage"
         case 2: return "Pause"
         case 3, 4: return "Back"
         case 5: return "Pause"
-        default: return "Ready \(-phase)"
+        default: return "Ready \(-value)"
         }
     }
 }

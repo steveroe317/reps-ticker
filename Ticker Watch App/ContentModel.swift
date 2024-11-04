@@ -18,7 +18,7 @@ import SwiftUI
 final class ContentModel: NSObject {
     var count = 0
     var phase = Phase()
-    private var timer: Timer?
+    let sharedTimer = TimerSingleton.shared
     let soundEffects: SoundEffects = SoundEffects()
     let speaker = AVSpeechSynthesizer()
     private var session: WKExtendedRuntimeSession!
@@ -29,28 +29,41 @@ final class ContentModel: NSObject {
     }
 
     deinit {
-        timer?.invalidate()
-        timer = nil
+        sharedTimer.timer?.invalidate()
+        stopCounting()
+        stopSession()
     }
     
     private func startCounting() {
+        guard sharedTimer.timer == nil else {
+            return
+        }
+        speaker.speak(AVSpeechUtterance(string: "ready"))
+        startSession()
+   }
+    
+    func stopCounting() {
+        sharedTimer.timer?.invalidate()
+        sharedTimer.timer = nil
+        stopSession()
+    }
+    
+    private func startSession() {
         session = WKExtendedRuntimeSession()
         session.delegate = self
         session.start()
-        speaker.speak(AVSpeechUtterance(string: "ready"))
     }
     
-    func stopCounting() {
-        timer?.invalidate()
-        timer = nil
-        session.invalidate()
+    private func stopSession() {
+        session?.invalidate()
+        session = nil
     }
 }
 
 extension ContentModel: WKExtendedRuntimeSessionDelegate {
     
     func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
-        timer = Timer(timeInterval: 1, repeats: true) { _ in
+        sharedTimer.timer = Timer(timeInterval: 1, repeats: true) { _ in
             self.phase.advance()
             if self.phase.CycleCompleted() {
                 self.count += 1
@@ -65,17 +78,15 @@ extension ContentModel: WKExtendedRuntimeSessionDelegate {
                 self.soundEffects.replay(name: "a3-note")
             }
         }
-        guard timer != nil else {
-            return
+        if sharedTimer.timer != nil {
+            RunLoop.main.add(sharedTimer.timer!, forMode: .common)
         }
-        RunLoop.main.add(timer!, forMode: .common)
     }
     
     func extendedRuntimeSessionWillExpire(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
     }
     
     func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: (any Error)?) {
-        timer?.invalidate()
-        timer = nil
+        stopCounting()
     }
 }

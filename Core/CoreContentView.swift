@@ -13,6 +13,7 @@ struct CoreContentView: View {
     @State private var repCounterActive = false
     @State private var repCount = 0
     @State var imageFontSize: CGFloat
+    @State var intentMessages = IntentMessages.shared
     
     var body: some View {
         VStack {
@@ -28,9 +29,18 @@ struct CoreContentView: View {
                 Text("Last Reps: \(repCount)")
                     .padding(.bottom)
                 Button("Start") {
-                    repCounterActive.toggle()
+                    startCounting()
+                }
+                .onChange(of: intentMessages.startCounting) {
+                    startCounting()
                 }
             }
+        }
+    }
+    
+    func startCounting() {
+        if !repCounterActive {
+            repCounterActive = true
         }
     }
 }

@@ -15,7 +15,8 @@ struct RepCounterView: View {
     @Binding var counting: Bool
     @Binding var repCount: Int
     @State var model = ContentModel()
-
+    @State var intentMessages = IntentMessages.shared
+    
     var body: some View {
         VStack {
             Text(model.phase.label())
@@ -23,16 +24,23 @@ struct RepCounterView: View {
             Text("Reps: \(model.count)")
             .padding(.bottom)
             Button("Stop") {
-                counting.toggle()
-                repCount = model.count
-                model.stopCounting()
+                endCounting()
+            }
+            .onChange(of: intentMessages.stopCounting) {
+                endCounting()
             }
         }
+    }
+    
+    func endCounting() {
+        repCount = model.count
+        model.stopCounting()
+        counting = false
     }
 }
 
 #Preview {
-    @State var counting = true
-    @State var repCount = 0
-    return RepCounterView(counting: $counting, repCount: $repCount)
+//    @Previewable @State var counting = true
+//    @Previewable @State var repCount = 0
+//    return RepCounterView(counting: $counting, repCount: $repCount)
 }

@@ -18,7 +18,7 @@ import SwiftUI
 final class ContentModel: NSObject {
     var count = 0
     var phase = Phase()
-    private var timer: Timer?
+    let sharedTimer = TimerSingleton.shared
     let soundEffects: SoundEffects = SoundEffects()
     let speaker = AVSpeechSynthesizer()
     
@@ -28,13 +28,15 @@ final class ContentModel: NSObject {
     }
     
     deinit {
-        timer?.invalidate()
-        timer = nil
+        stopCounting()
     }
     
     private func startCounting() {
+        guard sharedTimer.timer == nil else {
+            return
+        }
         speaker.speak(AVSpeechUtterance(string: "ready"))
-        timer = Timer(timeInterval: 1, repeats: true) { _ in
+        sharedTimer.timer = Timer(timeInterval: 1, repeats: true) { _ in
             self.phase.advance()
             if self.phase.CycleCompleted() {
                 self.count += 1
@@ -49,13 +51,13 @@ final class ContentModel: NSObject {
                 self.soundEffects.replay(name: "a3-note")
             }
         }
-        if timer != nil {
-            RunLoop.main.add(timer!, forMode: .common)
+        if sharedTimer.timer != nil {
+            RunLoop.main.add(sharedTimer.timer!, forMode: .common)
         }
     }
     
     func stopCounting() {
-        timer?.invalidate()
-        timer = nil
+        sharedTimer.timer?.invalidate()
+        sharedTimer.timer = nil
     }
 }
