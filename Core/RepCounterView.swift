@@ -14,7 +14,7 @@ import SwiftUI
 struct RepCounterView: View {
     @Binding var counting: Bool
     @Binding var repCount: Int
-    @State var model = ContentModel()
+    @State var model = CounterSession()
     @State var intentMessages = IntentMessages.shared
     
     var body: some View {

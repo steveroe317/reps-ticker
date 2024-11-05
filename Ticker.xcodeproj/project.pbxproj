@@ -15,10 +15,12 @@
 		2B195B4E2CD6CAA400313A2C /* IntentMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B195B4C2CD6CAA400313A2C /* IntentMessages.swift */; };
 		2B195B502CD6D2F800313A2C /* TimerSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B195B4F2CD6D2F800313A2C /* TimerSingleton.swift */; };
 		2B195B512CD6D2F800313A2C /* TimerSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B195B4F2CD6D2F800313A2C /* TimerSingleton.swift */; };
-		2B2BDCEE2C40B58200D19814 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BDCED2C40B58200D19814 /* ContentModel.swift */; };
+		2B2BDCEE2C40B58200D19814 /* CounterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BDCED2C40B58200D19814 /* CounterSession.swift */; };
 		2B2DD8A22C3650E400EE74A2 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2DD8A12C3650E400EE74A2 /* Audio.swift */; };
 		2B2DD8A32C3650EA00EE74A2 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2DD8A12C3650E400EE74A2 /* Audio.swift */; };
-		2B63F23A2C40E15800A2AA39 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63F2392C40E15800A2AA39 /* ContentModel.swift */; };
+		2B4389A62CD9B02400136F25 /* CounterSessionBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4389A52CD9B02400136F25 /* CounterSessionBase.swift */; };
+		2B4389A72CD9B02400136F25 /* CounterSessionBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4389A52CD9B02400136F25 /* CounterSessionBase.swift */; };
+		2B63F23A2C40E15800A2AA39 /* CounterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63F2392C40E15800A2AA39 /* CounterSession.swift */; };
 		2B63F23B2C40E26F00A2AA39 /* RepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93E5932C40BA6B00938677 /* RepCounterView.swift */; };
 		2B87BFDB2C31FE490008724A /* TickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87BFDA2C31FE490008724A /* TickerApp.swift */; };
 		2B87BFDD2C31FE490008724A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87BFDC2C31FE490008724A /* ContentView.swift */; };
@@ -108,10 +110,11 @@
 		2B195B492CD5882100313A2C /* StopCounting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopCounting.swift; sourceTree = "<group>"; };
 		2B195B4C2CD6CAA400313A2C /* IntentMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentMessages.swift; sourceTree = "<group>"; };
 		2B195B4F2CD6D2F800313A2C /* TimerSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSingleton.swift; sourceTree = "<group>"; };
-		2B2BDCED2C40B58200D19814 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		2B2BDCED2C40B58200D19814 /* CounterSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterSession.swift; sourceTree = "<group>"; };
 		2B2DD8952C361F4800EE74A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2B2DD8A12C3650E400EE74A2 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
-		2B63F2392C40E15800A2AA39 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		2B4389A52CD9B02400136F25 /* CounterSessionBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterSessionBase.swift; sourceTree = "<group>"; };
+		2B63F2392C40E15800A2AA39 /* CounterSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterSession.swift; sourceTree = "<group>"; };
 		2B87BFD72C31FE490008724A /* Ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B87BFDA2C31FE490008724A /* TickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerApp.swift; sourceTree = "<group>"; };
 		2B87BFDC2C31FE490008724A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -230,7 +233,7 @@
 				2B2DD8952C361F4800EE74A2 /* Info.plist */,
 				2B87BFDA2C31FE490008724A /* TickerApp.swift */,
 				2B87BFDC2C31FE490008724A /* ContentView.swift */,
-				2B63F2392C40E15800A2AA39 /* ContentModel.swift */,
+				2B63F2392C40E15800A2AA39 /* CounterSession.swift */,
 				2B87BFDE2C31FE4A0008724A /* Assets.xcassets */,
 				2B87BFE02C31FE4A0008724A /* Preview Content */,
 			);
@@ -269,7 +272,7 @@
 				2B0ACE232C3657F7003395B0 /* Ticker-Watch-App-Info.plist */,
 				2B87C0022C31FE4A0008724A /* TickerApp.swift */,
 				2B87C0042C31FE4A0008724A /* ContentView.swift */,
-				2B2BDCED2C40B58200D19814 /* ContentModel.swift */,
+				2B2BDCED2C40B58200D19814 /* CounterSession.swift */,
 				2B87C0062C31FE4B0008724A /* Assets.xcassets */,
 				2B87C0082C31FE4B0008724A /* Preview Content */,
 			);
@@ -313,6 +316,7 @@
 				2B0F2DAD2CD56B1B00210793 /* StartCounting.swift */,
 				2B195B492CD5882100313A2C /* StopCounting.swift */,
 				2B195B4F2CD6D2F800313A2C /* TimerSingleton.swift */,
+				2B4389A52CD9B02400136F25 /* CounterSessionBase.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -544,10 +548,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B195B4D2CD6CAA400313A2C /* IntentMessages.swift in Sources */,
+				2B4389A62CD9B02400136F25 /* CounterSessionBase.swift in Sources */,
 				2B87BFDD2C31FE490008724A /* ContentView.swift in Sources */,
 				2B63F23B2C40E26F00A2AA39 /* RepCounterView.swift in Sources */,
 				2B195B4B2CD5882100313A2C /* StopCounting.swift in Sources */,
-				2B63F23A2C40E15800A2AA39 /* ContentModel.swift in Sources */,
+				2B63F23A2C40E15800A2AA39 /* CounterSession.swift in Sources */,
 				2B87BFDB2C31FE490008724A /* TickerApp.swift in Sources */,
 				2B0F2DAE2CD56B1B00210793 /* StartCounting.swift in Sources */,
 				2B195B512CD6D2F800313A2C /* TimerSingleton.swift in Sources */,
@@ -580,8 +585,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B195B4E2CD6CAA400313A2C /* IntentMessages.swift in Sources */,
+				2B4389A72CD9B02400136F25 /* CounterSessionBase.swift in Sources */,
 				2B2DD8A32C3650EA00EE74A2 /* Audio.swift in Sources */,
-				2B2BDCEE2C40B58200D19814 /* ContentModel.swift in Sources */,
+				2B2BDCEE2C40B58200D19814 /* CounterSession.swift in Sources */,
 				2B195B4A2CD5882100313A2C /* StopCounting.swift in Sources */,
 				2B87C0052C31FE4A0008724A /* ContentView.swift in Sources */,
 				2B93E5942C40BA6B00938677 /* RepCounterView.swift in Sources */,

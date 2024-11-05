@@ -8,19 +8,12 @@
 import AVFoundation
 import SwiftUI
 
-@Observable
 /// Times an exercise set reps with auditory cues and counts.
 ///
 /// This class is different in iOS/ipadOS and watchOS due to differences in background task
-/// task handling, but much code is duplicated between the two classes.
-///
-/// TODO: Refactor to reduce duplicated code. Maybe use a protocol and a factory method in clients.
-final class ContentModel: NSObject {
-    var count = 0
-    var phase = Phase()
-    let sharedTimer = TimerSingleton.shared
-    let soundEffects: SoundEffects = SoundEffects()
-    let speaker = AVSpeechSynthesizer()
+/// task handling.
+@Observable
+final class CounterSession: CounterSessionBase {
     private var session: WKExtendedRuntimeSession!
 
     override init () {
@@ -38,7 +31,7 @@ final class ContentModel: NSObject {
         guard sharedTimer.timer == nil else {
             return
         }
-        speaker.speak(AVSpeechUtterance(string: "ready"))
+        issueReadyAnnouncement()
         startSession()
    }
     
@@ -60,24 +53,10 @@ final class ContentModel: NSObject {
     }
 }
 
-extension ContentModel: WKExtendedRuntimeSessionDelegate {
+extension CounterSession: WKExtendedRuntimeSessionDelegate {
     
     func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
-        sharedTimer.timer = Timer(timeInterval: 1, repeats: true) { _ in
-            self.phase.advance()
-            if self.phase.CycleCompleted() {
-                self.count += 1
-            }
-            if (self.phase.atEngage()) {
-                self.speaker.speak(AVSpeechUtterance(string: String(self.count + 1)))
-            } else if (self.phase.atEngagePause()) {
-                self.soundEffects.replay(name: "a3-note")
-            } else if (self.phase.atBack()) {
-                self.soundEffects.replay(name: "a4-note")
-            } else if (self.phase.atBackPause()) {
-                self.soundEffects.replay(name: "a3-note")
-            }
-        }
+        sharedTimer.timer = makeCounterTimer()
         if sharedTimer.timer != nil {
             RunLoop.main.add(sharedTimer.timer!, forMode: .common)
         }
