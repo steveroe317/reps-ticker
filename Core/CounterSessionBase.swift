@@ -20,6 +20,12 @@ class CounterSessionBase: NSObject {
         speaker.speak(AVSpeechUtterance(string: "ready"))
     }
     
+    func issueCompleteAnnouncement() {
+        if self.count > 0 {
+            speaker.speak(AVSpeechUtterance(string: "\(self.count) completed"))
+        }
+    }
+    
     func makeCounterTimer() -> Timer {
         return Timer(timeInterval: 1, repeats: true) { _ in
             self.phase.advance()

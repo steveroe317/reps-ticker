@@ -38,5 +38,6 @@ final class CounterSession: CounterSessionBase {
     func stopCounting() {
         sharedTimer.timer?.invalidate()
         sharedTimer.timer = nil
+        issueCompleteAnnouncement()
     }
 }
