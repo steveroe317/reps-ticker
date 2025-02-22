@@ -18,6 +18,9 @@ final class CounterSession: CounterSessionBase {
 
     override init () {
         super.init()
+        
+        // Wait longer on watch to let speech module start up.
+        phase.setPhase(phaseValue: -5)
         startCounting()
     }
 

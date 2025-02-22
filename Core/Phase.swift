@@ -12,6 +12,10 @@ import Foundation
     private var value = -3
     private var cycleCompleted = false
     
+    func setPhase(phaseValue: Int) {
+        value = phaseValue
+    }
+    
     func advance() {
         if value < 5 {
             value += 1
