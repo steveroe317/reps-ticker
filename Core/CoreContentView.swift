@@ -46,6 +46,6 @@ struct CoreContentView: View {
 }
 
 #Preview {
-    CoreContentView(imageFontSize: 30)
+    CoreContentView(imageFontSize: 90)
         .environment(\.font, Font.custom("SF Pro", size: 36))
 }
