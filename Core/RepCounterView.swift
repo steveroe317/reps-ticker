@@ -40,7 +40,7 @@ struct RepCounterView: View {
 }
 
 #Preview {
-//    @Previewable @State var counting = true
+//    @Previewable @State var counting = false
 //    @Previewable @State var repCount = 0
 //    return RepCounterView(counting: $counting, repCount: $repCount)
 }
