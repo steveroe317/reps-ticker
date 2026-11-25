@@ -1,2 +1,3 @@
-@AGENTS.MD
+## Framework and language guidelines
 
+@AGENTS.md
