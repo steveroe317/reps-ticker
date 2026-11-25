@@ -24,7 +24,7 @@ final class CounterSession: CounterSessionBase {
         startCounting()
     }
 
-    deinit {
+    isolated deinit {
         sharedTimer.timer?.invalidate()
         stopCounting()
         stopSession()

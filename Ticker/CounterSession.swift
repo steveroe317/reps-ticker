@@ -20,7 +20,7 @@ final class CounterSession: CounterSessionBase {
         startCounting()
     }
     
-    deinit {
+    isolated deinit {
         stopCounting()
     }
     

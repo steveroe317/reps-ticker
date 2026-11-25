@@ -7,6 +7,7 @@
 
 import XCTest
 
+@MainActor
 final class Ticker_Watch_AppUITests: XCTestCase {
 
     override func setUpWithError() throws {

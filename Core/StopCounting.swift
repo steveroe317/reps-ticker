@@ -10,9 +10,9 @@ import Foundation
 
 struct StopCounting: AppIntent {
 
-    static var title: LocalizedStringResource = "Stop Ticker Counting"
-    static var description = IntentDescription("Stops RepTicker counting reps, if already counting")
-    static var openAppWhenRun: Bool = false
+    static let title: LocalizedStringResource = "Stop Ticker Counting"
+    static let description = IntentDescription("Stops RepTicker counting reps, if already counting")
+    static let openAppWhenRun: Bool = false
     
     @MainActor
     func perform() async throws -> some IntentResult {

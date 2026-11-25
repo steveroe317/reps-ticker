@@ -7,6 +7,7 @@
 
 import XCTest
 
+@MainActor
 final class Ticker_Watch_AppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
