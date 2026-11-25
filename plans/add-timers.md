@@ -382,6 +382,39 @@ Also noted:
   background", and the entitlement is present with no access types. Not touched by this plan,
   but worth confirming it is still needed before the next App Review submission.
 
+## Prior review and architecture doc
+
+`docs/code-reviews/2026-04-09.md` and `docs/architecture.md` were written against an older
+tree (`ContentModel`, before `CounterSessionBase` existed). Status of each review finding:
+
+| Review finding | Status |
+|----------------|--------|
+| `@Observable` classes missing `@MainActor` | Fixed in Phase 0 (MainActor default isolation). |
+| Timer callback copy-pasted between targets | Already fixed by `CounterSessionBase`. |
+| `init()` starts the timer; `RepCounterView` depends on a per-target type; `repCount` owned by the wrong view | R1 + R6 + R9. |
+| Timer closure retain cycle | R7: the `Task` driver is cancelled in `stop()` and on finish; the session lives for the app's lifetime, so a strong capture is safe. |
+| `Phase` magic numbers, `CycleCompleted()` naming, flag-based completion | R4 deletes `Phase`. |
+| Magic sound-key strings; `[String: AVAudioPlayer?]` double optional; free `makeAudioPlayer` | R3: `Tone` enum keys `CuePlayer`'s players; build `[Tone: AVAudioPlayer]` with nils filtered out. |
+| `Audio.swift` force unwrap | R3, via `Bundle.main.url(forResource:withExtension:)`. |
+| Watch `session` implicitly unwrapped; `if timer != nil { …timer! }` | R6 (`WatchRuntimeHost` holds an optional); the timer code is deleted. |
+| iOS session inherits `NSObject` without reason | R6: only `WatchRuntimeHost` needs `NSObject`. |
+| `count + 1` off-by-one reads oddly | `repSchedule`: name it `nextRep`, with a comment. |
+| No unit tests | Tests section (`Phase` tests moot once it is deleted). |
+| **`Font.custom("SF Pro", size:)` bypasses Dynamic Type; two sizing mechanisms** | **Not covered before — added as R14.** |
+| **Audio session failure only `print`ed** | **Not covered before — added to Phase 4.** |
+| **`Ticker_Watch_AppApp` struct name** | **Not covered before — rename to `TickerWatchApp` in Phase 1 (R1 edits that file anyway).** |
+
+| #   | Refactoring | Why |
+|-----|-------------|-----|
+| R14 | Replace `Font.custom("SF Pro", size:)` and the `imageFontSize` parameter with text styles (`.largeTitle`, `.title`, …) and `.imageScale` / `.font` on the symbol, so the UI follows Dynamic Type. Done with R9/R11, since those rewrite the same views. | Accessibility; AGENTS.md forbids forced font sizes. Also where the watch idle-screen fit gets checked. |
+
+`docs/architecture.md` is stale in several places: wrong type names and file list; it calls
+`Phase` a value type (it is a class); the tone timing is wrong (speech at engage, A3 at both
+pauses, A4 at return); it lists `.system(size:)` fonts (the code uses `.custom("SF Pro")`); and
+it says HealthKit is required for `workout-processing`. It also leaves out intents. **Rewrite it
+at the end of Phase 1**, when the new structure exists, and mark the 2026-04-09 review as
+describing the pre-Phase-0 code.
+
 ## Phases
 
 **Phase 0 — toolchain, zero behavior change.** R0. Raise `IPHONEOS_DEPLOYMENT_TARGET` and
@@ -403,7 +436,7 @@ then failing to reach the paired iPhone over the network — not the code. Wait 
 to finish in Devices and Simulators; connect the iPhone by cable if Xcode cannot find it.
 
 **Phase 1 — structural, zero behavior change.** R3 -> R4 -> R1 -> R2 -> R6 -> R5 plumbing
--> R7.
+-> R7, plus the `TickerWatchApp` rename. Ends with the `docs/architecture.md` rewrite.
 
 The app must behave *identically* to today when this lands (ducking excepted, if it is
 switched on here rather than Phase 4). This is most of the total effort and the checkpoint
@@ -411,7 +444,7 @@ worth verifying carefully, because a regression here breaks the feature that alr
 R7 moves here from Phase 2 because the `Task` driver replaces `Timer` as part of R4 anyway.
 
 **Phase 2 — rest.** `restSchedule` + the Rest button on idle and reps screens + hand-off (R12)
-+ generic `ActivityView` (R9) + iPhone keep-awake. Device check: a full 5:00 rest with the
++ generic `ActivityView` (R9) + Dynamic Type (R14) + iPhone keep-awake. Device check: a full 5:00 rest with the
 iPhone left on screen and with the watch wrist-down.
 
 **Phase 3 — stretch.** `stretchSchedule(hold:)` + round display + the Stretch button with a
@@ -420,7 +453,8 @@ remembered N (R11) + watch haptics.
 **Phase 4 — Siri, intents, and audio.** `StartRest`, `StartStretch(hold:)`, `StretchHold`,
 `TickerShortcuts` (R13), `@Dependency` wiring and delete `IntentMessages` (R10), retitle and
 generalize `StopCounting`, `.playback` + `.duckOthers` with the ducking window, move audio
-configuration into `ActivitySession.start()`.
+configuration into `ActivitySession.start()` and surface a failure there (the activity
+screen shows that audio is unavailable instead of running silently).
 
 Watch out in Phase 4: with a shared session, an intent's `perform()` can run **before any
 view exists** when `openAppWhenRun` launches the app — another reason audio configuration
