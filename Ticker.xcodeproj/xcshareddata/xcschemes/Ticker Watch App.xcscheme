@@ -84,7 +84,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B87BFFC2C31FE4A0008724A"
             BuildableName = "Ticker Watch App.app"
-            BlueprintName = "Ticker Watch App"
             ReferencedContainer = "container:Ticker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -108,7 +107,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B87BFFC2C31FE4A0008724A"
             BuildableName = "Ticker Watch App.app"
-            BlueprintName = "Ticker Watch App"
             ReferencedContainer = "container:Ticker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
