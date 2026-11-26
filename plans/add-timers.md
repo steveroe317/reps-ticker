@@ -1,7 +1,7 @@
 # Plan: Rest and Stretch Timers
 
-Status: **Phase 0 done** (`5c8f772`, verified on iPhone, iPad, and Apple Watch). Phase 1
-next. Last updated 2026-11-25.
+Status: **Phase 0 done** (`5c8f772`). **Phase 1 done** on branch `phase-1-sequencer`,
+checked on iPhone and watch. Next: Phase 2. Last updated 2026-11-25.
 
 ## Goal
 
@@ -232,21 +232,36 @@ Sound / haptic production  ->  CuePlayer
 
 ### The segment sequencer
 
+As built in Phase 1:
+
 ```swift
-enum Cue { case tone(Tone), speak(String), haptic(Haptic) }
+enum Cue { case tone(Tone), speak(String) }      // .haptic(Haptic) arrives in Phase 3
+
+struct SegmentPosition { let offset, remaining, cycle: Int }
 
 struct Segment {
     let duration: Int
-    let label: (Int) -> String     // remaining -> "Ready 3" / "Left" / "Rest"
-    let startCues: [Cue]           // e.g. [.speak("left"), .haptic(.sideChange)]
-    let tickCues: (Int) -> [Cue]   // offset -> cues; 30 s marks and 3-2-1 live here
+    let label: (SegmentPosition) -> String      // "Ready \(remaining)" / "Engage" / "Rest"
+    let cues: (SegmentPosition) -> [Cue]        // offset 0 = start; 30 s marks and 3-2-1 too
+    init(duration:label:startCues:)             // convenience: fixed label, cues at start
 }
 
-enum Schedule {
-    case cycle([Segment])     // repeats until stopped  — reps
-    case sequence([Segment])  // runs once, then finishes — rest, stretch
+struct Schedule {
+    let leadIn: [Segment]                       // played once
+    let body: [Segment]                         // repeated, or played once then finish
+    let repeats: Bool
+    let stopCues: (_ completedCycles: Int) -> [Cue]   // reps: "N completed"
+    let finishCues: [Cue]                             // rest: "rest finished"
+    static func cycle(leadIn:body:stopCues:) -> Schedule      // reps
+    static func sequence(_:finishCues:) -> Schedule           // rest, stretch
+    func step(at second: Int) -> ScheduleStep?   // label + cues; nil once a sequence ends
+    func completedCycles(at second: Int) -> Int
 }
 ```
+
+A struct rather than the enum first sketched: reps need a lead-in that does not repeat, and
+stop and finish cues belong to the activity rather than the session. `SegmentPosition.cycle`
+is what lets the Engage segment speak the upcoming rep number.
 
 Cues are arrays because a moment can carry several (speech + haptic). Silence is `[]`.
 
@@ -271,12 +286,15 @@ rather than generalized. Two things dissolve into the model for free:
 ### Schedules as data
 
 ```swift
-func repSchedule(leadIn: Int) -> Schedule
-func restSchedule() -> Schedule                               // one 300 s segment, no lead-in
-func stretchSchedule(hold: StretchHold, leadIn: Int) -> Schedule // fully expanded, 3 rounds
+extension Schedule {
+    static func reps(leadIn: Int) -> Schedule                         // Phase 1
+    static func rest() -> Schedule                                    // one 300 s segment, no lead-in
+    static func stretch(hold: StretchHold, leadIn: Int) -> Schedule   // fully expanded, 3 rounds
+}
 ```
 
-These are pure functions returning arrays, which makes them directly unit-testable.
+Static members, so call sites read `session.start(.rest())`. They are pure, which makes them
+directly unit-testable.
 
 ### Session and runtime
 
@@ -292,11 +310,15 @@ drift off. Elapsed-time derivation plus the cue high-water mark also makes a mis
 a cue rather than fall behind forever. The driver is a `Task` that sleeps until each next
 whole second (`Task.sleep(until:clock:)`), replacing `Timer` and `RunLoop`.
 
-The clock, `CuePlayer`, and `RuntimeHost` are injected so `ActivitySession` is testable with
-fakes.
+`CuePlaying` and `RuntimeHost` are injected so `ActivitySession` is testable with fakes;
+tests drive time with the internal `advance(to:)` instead of injecting a clock, because a fake
+host that never reports ready keeps the real clock from starting. A run counter makes
+callbacks and ticks from an earlier run no-ops.
 
-`RuntimeHost` abstracts the platform lifetime: `acquire(onReady:)` / `release()`. iOS calls
-back immediately and disables auto-lock; watchOS starts a `WKExtendedRuntimeSession` and calls
+`RuntimeHost` abstracts the platform lifetime: `leadIn`, `acquire(onReady:onLost:)`, and
+`relinquish()` (not `release()`, which `NSObject` reserves). `onLost` lets the platform end
+an activity, which stops it like the user pressing Stop. iOS calls back immediately (and from
+Phase 2 disables auto-lock); watchOS starts a `WKExtendedRuntimeSession` and calls
 back from `extendedRuntimeSessionDidStart`. One runtime session per **run of activities**,
 never per segment — a 7:18 stretch routine with internal rests, or a reps → rest hand-off,
 holds a single session throughout. The extended runtime session this code starts runs under
@@ -308,15 +330,21 @@ rate-limiting a start.
 
 ```
 Core/
-  Cue.swift              NEW     Cue, Tone, Haptic
-  CuePlayer.swift        NEW     owns SoundEffects + AVSpeechSynthesizer, ducking window,
-                                 watch haptics (WKInterfaceDevice.play)
-  Segment.swift          NEW     Segment
-  Schedule.swift         NEW     Schedule
-  Schedules.swift        NEW     repSchedule / restSchedule / stretchSchedule
+  Cue.swift              NEW     Cue                                  (Phase 1)
+  Tone.swift             NEW     Tone, with its file name             (Phase 1)
+  Haptic.swift           NEW     Haptic                               (Phase 3)
+  CuePlaying.swift       NEW     protocol, for test fakes             (Phase 1)
+  CuePlayer.swift        NEW     owns SoundEffects + AVSpeechSynthesizer (Phase 1); ducking
+                                 window (Phase 4); watch haptics via WKInterfaceDevice (Phase 3)
+  Segment.swift          NEW     Segment                              (Phase 1)
+  SegmentPosition.swift  NEW     offset / remaining / cycle           (Phase 1)
+  Schedule.swift         NEW     Schedule                             (Phase 1)
+  ScheduleStep.swift     NEW     label + cues for one second          (Phase 1)
+  Schedules.swift        NEW     Schedule.reps (Phase 1) / .rest / .stretch
+  PreviewRuntimeHost.swift NEW   RuntimeHost for SwiftUI previews     (Phase 1)
   StretchHold.swift      NEW     AppEnum 15 / 30 / 60
   ActivitySession.swift  NEW     sequencer + clock + hand-off + lifecycle (was CounterSessionBase)
-  RuntimeHost.swift      NEW     protocol acquire(onReady:) / release()
+  RuntimeHost.swift      NEW     protocol leadIn / acquire(onReady:onLost:) / relinquish()
   ActivityView.swift     RENAME  was RepCounterView — generic label / detail / Stop (+ Rest for reps)
   CoreContentView.swift  CHANGE  idle: Start / Rest / Stretch + remembered N selector
   SoundEffects.swift     KEEP
@@ -442,6 +470,29 @@ The app must behave *identically* to today when this lands (ducking excepted, if
 switched on here rather than Phase 4). This is most of the total effort and the checkpoint
 worth verifying carefully, because a regression here breaks the feature that already works.
 R7 moves here from Phase 2 because the `Task` driver replaces `Timer` as part of R4 anyway.
+
+*As built:* everything above except R10 and R9's rename — `IntentMessages` and the name
+`RepCounterView` stay until Phases 4 and 2. 22 unit tests (Swift Testing) pass on the iOS
+simulator. Intentional differences from the old behavior, all on watchOS or at launch:
+
+- If the extended runtime session ends unexpectedly or fails to start, the app now returns to
+  idle and records Last Reps. Before, it spoke "N completed" but stayed on a frozen counting
+  screen.
+- After a normal Stop, invalidating the extended runtime session can no longer re-run the stop
+  path (which could have spoken "N completed" twice).
+
+The tone players and speech synthesizer are now made once, with the session at launch, rather
+than at every Start.
+
+On the watch, with Xcode's debugger attached, the first speech after launch can come many
+seconds late — into rep 1 or 2, then "ready, 1, 2, 3" together — and some countdown and phase
+labels are skipped. Phase 0 does the same under the debugger. Neither happens with Debug
+executable unchecked in the scheme, or in a profiling (Release) build, so it is a debugger
+effect, not an app bug: attaching pauses the app while the speech frameworks load. Check speech
+timing on the watch without the debugger.
+
+Device check: reps on iPhone and watch (ready countdown, numbers, tones, "N completed", Last
+Reps), Stop by button and by Shortcut, and starting again after a Stop.
 
 **Phase 2 — rest.** `restSchedule` + the Rest button on idle and reps screens + hand-off (R12)
 + generic `ActivityView` (R9) + Dynamic Type (R14) + iPhone keep-awake. Device check: a full 5:00 rest with the

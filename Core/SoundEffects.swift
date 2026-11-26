@@ -7,17 +7,22 @@
 
 import AVFoundation
 
-/// Audio sound effects for rep phases.
-class SoundEffects {
-    var sounds = [
-        "a4-note": makeAudioPlayer(filename: "A4-440Hz.wav"),
-        "a3-note": makeAudioPlayer(filename: "A3-220Hz.wav"),
-    ]
-    
-    func replay(name: String) {
-        if let sound = sounds[name] {
-            sound?.stop()
-            sound?.play()
+/// Preloaded players for the cue tones.
+final class SoundEffects {
+    private let players: [Tone: AVAudioPlayer]
+
+    init() {
+        var players: [Tone: AVAudioPlayer] = [:]
+        for tone in Tone.allCases {
+            players[tone] = AVAudioPlayer.bundledWAV(named: tone.fileName)
         }
+        self.players = players
+    }
+
+    /// Plays a tone. Does nothing if its sound file could not be loaded.
+    func play(_ tone: Tone) {
+        guard let player = players[tone] else { return }
+        player.stop()
+        player.play()
     }
 }

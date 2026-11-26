@@ -5,16 +5,14 @@
 //  Created by Steve Roe on 7/1/24.
 //
 
-import AVFoundation
 import SwiftUI
 
 /// Common exercise counter view used by iPad, iPhone, and watch apps.
 struct CoreContentView: View {
-    @State private var repCounterActive = false
-    @State private var repCount = 0
+    @Environment(ActivitySession.self) private var session
     @State var imageFontSize: CGFloat
-    @State var intentMessages = IntentMessages.shared
-    
+    @State private var intentMessages = IntentMessages.shared
+
     var body: some View {
         VStack {
             Image(systemName: "figure.core.training")
@@ -22,25 +20,19 @@ struct CoreContentView: View {
                 .foregroundStyle(.blue)
                 .font(.custom("SF Pro", size: imageFontSize))
                 .padding(.bottom)
-            if repCounterActive {
-                RepCounterView(counting: $repCounterActive, repCount: $repCount)
+            if session.isActive {
+                RepCounterView()
             } else {
                 Text("Exercise Timer").padding()
-                Text("Last Reps: \(repCount)")
+                Text("Last Reps: \(session.lastReps)")
                     .padding(.bottom)
                 Button("Start") {
-                    startCounting()
+                    session.startReps()
                 }
                 .onChange(of: intentMessages.startCounting) {
-                    startCounting()
+                    session.startReps()
                 }
             }
-        }
-    }
-    
-    func startCounting() {
-        if !repCounterActive {
-            repCounterActive = true
         }
     }
 }
@@ -48,4 +40,5 @@ struct CoreContentView: View {
 #Preview {
     CoreContentView(imageFontSize: 90)
         .environment(\.font, Font.custom("SF Pro", size: 36))
+        .environment(ActivitySession(host: PreviewRuntimeHost()))
 }

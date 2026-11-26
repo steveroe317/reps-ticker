@@ -6,22 +6,15 @@
 //
 
 import AVFoundation
-import Foundation
 
-/// Creates an audio player for a specifc sound.
-/// - Parameter filename: file containing the sound data.
-/// - Returns: Audio player for the sound.
-func makeAudioPlayer(filename: String) -> AVAudioPlayer? {
-    let filepath = Bundle.main.path(forResource: filename, ofType: nil)
-    let url: URL? = URL(fileURLWithPath: filepath!)
-    var soundEffect: AVAudioPlayer? = nil
-    if url != nil {
-        do {
-        soundEffect = try AVAudioPlayer(contentsOf: url!)
+extension AVAudioPlayer {
+    /// Creates a player for a `.wav` file in the main bundle.
+    /// - Parameter name: file name without the extension.
+    /// - Returns: the player, or `nil` if the file is missing or unreadable.
+    static func bundledWAV(named name: String) -> AVAudioPlayer? {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "wav") else {
+            return nil
         }
-        catch {
-            soundEffect = nil
-        }
+        return try? AVAudioPlayer(contentsOf: url)
     }
-    return soundEffect
 }
